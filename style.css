@@ -770,12 +770,17 @@ body.nav-open {
     border-radius: 0 0 24px 24px;
   }
 
+  .hero-right {
+    position: static;
+  }
+
   .social-links {
-    position: relative;
-    top: -540px;
+    position: static;
+    top: auto;
     left: auto;
+    width: 100%;
     justify-content: center;
-    margin-top: 16px;
+    margin: 24px auto 0;
     padding-bottom: 10px;
   }
 
