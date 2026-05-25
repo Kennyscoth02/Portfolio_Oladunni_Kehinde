@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("zmf5Oeaug7pUiJMXg");
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Oladunni Kehinde | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="images/png" href="images/logo.jpeg" />
+  </head>
+  <body>
+    <!-- hamburger button for mobile menu -->
+    <div id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <div class="nav-logo">Oladunni.</div>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-btn" id="themeBtn" title="Toggle dark mode">
+          🌙
+        </button>
+        <a
+          href="https://wa.me/2349015941800?text=Hello%20Scoth_Tech!%20I%20would%20like%20to%20make%20an%20enquiries."
+          target="_blank"
+          class="cta-btn"
+          >Let's Chat</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <p class="hero-greetings">Hello,</p>
+        <p class="hero-name">I'm Oladunni Kehinde</p>
+        <h1 class="hero-title" id="typedTitle"></h1>
+        <p class="hero-desc">
+          I build modern, scalable web applications using React, Node.js,
+          databases and cloud tools. I'm passionate about crafting seamless user
+          experiences from front to back.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="cta-btn">Get in Touch</a>
+          <a href="#projects" class="btn-outline">View My Work</a>
+          <a href="cv/Oladunni_Kehinde_CV.pdf" target="_blank" class="cta-btn"
+            >View My CV</a
+          >
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="avatar-circle">
+          <img src="images/scoth.jpeg" alt="Oladunni Kehinde avatar" />
+        </div>
+        <div class="card-show">
+          <h2>Show your work<br />And get clients</h2>
+        </div>
+        <div class="card-portfolio">
+          <p>🚀 Portfolio Website</p>
+        </div>
+
+        <div class="social-links">
+          <a
+            href="https://github.com/Kennyscoth02"
+            target="_blank"
+            class="social-btn github"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/oladunni-kehinde-softwaredev/"
+            target="_blank"
+            class="social-btn linkedin"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://x.com/Kennyscoth_Tech"
+            target="_blank"
+            class="social-btn twitter"
+            title="x.com"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://tiktok.com/@scoth_67"
+            target="_blank"
+            class="social-btn tiktok"
+            title="TikTok"
+          >
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS-->
+    <div class="stats reveal">
+      <div class="stat">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Technologies</div>
+      </div>
+    </div>
+
+    <!-- SERVICES-->
+
+    <section id="services">
+      <h2 class="section-title reveal">What I Do</h2>
+      <p class="section-sub reveal">
+        Services I offer to help bring your ideas to life
+      </p>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            🎨<i class="fa-solid fa-code"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+          <h3>Frontend Development</h3>
+          <p>
+            Beautiful, responsive UIs using React, HTML, CSS & Modern Javascript
+            Frameworks.
+          </p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">⚙️</div>
+          <h3>Backend Development</h3>
+          <p>
+            Robust REST APIs and server-side logic with Node.js, Express and
+            databases.
+          </p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Database Design</h3>
+          <p>
+            Efficient data modelling with SQL & NoSQL databases - PostgreSQL,
+            MongoDB & more.
+          </p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3>Deployment & DevOps</h3>
+          <p>
+            Deploying apps to the cloud with CI/CD pipelines, Docker and
+            platforms lie Vercel & AWS.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS-->
+
+    <section
+      id="projects"
+      style="
+        background: var(--surface);
+        border-radius: 24px;
+        margin: 0 48px;
+        transition: background 0.4s;
+      "
+    >
+      <h2 class="section-title reveal">My Projects</h2>
+      <p class="section-sub reveal">A selection of work I'm proud of</p>
+      <div class="project-grid">
+        <div class="project-card reveal">
+          <div class="project-thumb">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+          </div>
+          <div class="project-info">
+            <h3>E-Commerce Platform</h3>
+            <p>
+              Full-stack shopping app with cart, auth, payments and admin
+              dashboard.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div
+            class="project-thumb"
+            style="background: linear-gradient(135deg, #6366f1, #8b5cf6)"
+          >
+            <i class="fa-solid fa-list-check"></i>
+          </div>
+          <div class="project-info">
+            <h3>Task Management App</h3>
+            <p>
+              Real-time collaborative task tracer with drag-and-drop and team
+              spaces.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div
+            class="project-thumb"
+            style="background: linear-gradient(135deg, #f59e0b, #ef4444)"
+          >
+            <i class="fa-solid fa-newspaper"></i>
+          </div>
+          <div class="project-info">
+            <h3>Blog Platform</h3>
+            <p>
+              CMS-powered blog with markdown suport, auth, comments and SEO
+              optimization.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Express</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT-->
+
+    <section id="contact">
+      <div class="contact-wrapper">
+        <div class="contact-info reveal">
+          <h2>Let's Work Together</h2>
+          <p>
+            Have a project in mind? I'd love to hear about it. Send me a message
+            and let's create something amazing.
+          </p>
+          <div class="contact-detail">
+            <span><i class="fa-solid fa-envelopes-bulk"></i></span>
+            <span>scoth67@gmail.com</span>
+          </div>
+          <div class="contact-detail">
+            <span>📞</span>
+            <span>+2349015941800</span>
+          </div>
+          <div class="contact-detail">
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <span>Nigeria</span>
+          </div>
+          <div class="contact-detail">
+            <span>💼</span> <span>Available for freelance & part-time</span>
+          </div>
+        </div>
+        <div class="contact-form reveal">
+          <div class="form-group">
+            <label>Your Name:</label>
+            <input type="text" placeholder="Ayobami Noble" required />
+          </div>
+          <div class="form-group">
+            <label>Email Address:</label>
+            <input type="email" placeholder="noble@gmail.com" required />
+          </div>
+          <div class="form-group">
+            <label>Message:</label>
+            <textarea
+              placeholder="Tell me about your project..."
+              required
+            ></textarea>
+          </div>
+          <button class="submit-btn">Send Message 🚀</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER-->
+
+    <footer>
+      <div class="social-links-footer">
+        <a
+          href="https://github.com/Kennyscoth02"
+          target="_blank"
+          class="social-btn github"
+          title="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/oladunni-kehinde-softwaredev/"
+          target="_blank"
+          class="social-btn linkedin"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://x.com/Kennyscoth_Tech"
+          target="_blank"
+          class="social-btn twitter"
+          title="x.com"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a
+          href="https://tiktok.com/@scoth_67"
+          target="_blank"
+          class="social-btn tiktok"
+          title="TikTok"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+      <p>
+        © 2026 SCOTH_TECH
+        <span class="footer-name">Designed by Oadunni Kehinde</span>. Full Stack
+        Developer. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
